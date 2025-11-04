@@ -25,10 +25,15 @@ for($i=1; $i<=3; $i++) {
     array_push($instrumentos, $inst);
 }
 
-//print_r($instrumentos);
+print_r($instrumentos);
 
 //Foreach
 
+$soma = 0;
+
 foreach ($instrumentos as $int) {
     echo "O instrumento teve nota final de " . $int->getNotaFinal() . ".\n";
+    $soma += $int->getNotaFinal();
 }
+
+echo "A media é: " . $soma = $soma/3 . "\n";
