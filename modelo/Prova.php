@@ -3,6 +3,12 @@
 class Prova extends Instrumento{
 
     public function getNotaFinal(){
-        return $this->getNota() + ($this->getNota() * (30/100));
+        $notaFinal = $this->getNota() + ($this->getNota() * (30/100));
+        if($notaFinal > 10){
+            return 10;
+        }else{
+            return $notaFinal;
+            
+        }
     }
 }
